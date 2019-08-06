@@ -88,7 +88,7 @@ class Plotter:
           self.w[:] = []
 
 
-print 'Please remove the VGA connection that sometimes interfere with Mindwave'
+print ('Please remove the VGA connection that sometimes interfere with Mindwave')
 
 
 import mindwave, time
@@ -111,9 +111,9 @@ f = open(filename, 'w')
 
 try:
     while (headset.poor_signal > 5):
-        print "Headset signal noisy %d. Adjust the headset to adjust better to your forehead." % (headset.poor_signal)
+        print ("Headset signal noisy %d. Adjust the headset to adjust better to your forehead." % (headset.poor_signal))
 
-    print "Writing %d seconds output to %s" % (lamdalength,filename)
+    print ("Writing %d seconds output to %s" % (lamdalength,filename))
     for i in range(0,samplepoints):
         time.sleep(.01)
         (count,eeg, attention, meditation, blink) = (headset.count, headset.raw_value, headset.attention, headset.meditation, headset.blink)
